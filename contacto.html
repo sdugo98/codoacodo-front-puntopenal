@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio | Punto Penal FC</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contacto-style.css" />
+    
+    <link rel="shortcut icon" href="images/logo-puntopenal.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/13b7066a14.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header id="header-nav">
+      <aside id="buttons">
+        <div class="redes-btn">
+          <a href="#"><i class="fa-brands fa-facebook fa-2x"></i> </a>
+          <a href="#"><i class="fa-brands fa-instagram fa-2x"></i> </a>
+          <a href="#"><i class="fa-brands fa-whatsapp fa-2x"></i> </a>
+          <a href="#"><i class="fa-solid fa-envelope fa-2x"></i> </a>
+        </div>
+        <div class="reserva-btn">
+          <a href="login.html">Hacé tu reserva</a>
+        </div>
+      </aside>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a class="logo" href="index.html">
+            <img src="images/logo-puntopenal.png" alt="logo" />
+          </a>
+          <button id="menu-toggler">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="2em"
+              viewBox="0 0 448 512"
+            >
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div id="nav-menu" class="menu-close">
+          <a class="menu-nosotros" href="index.html">Nosotros</a>
+          <!-- Puse el link a la pag de Alquiler -->
+          <a href="Alquiler.html">Alquiler de canchas</a>
+          <a href="index.html"
+            ><img src="images/logo-puntopenal.png" alt="logo" width="150"
+          /></a>
+          <a href="otrosservicios.html" class="menu-servicios"
+            >Otros servicios</a
+          >
+          <a href="contacto.html" class="menu-contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+    <h1 class="pAlquiler">Formulario de Contacto</h1>
+    <form id="formulario" onsubmit="return validarFormulario()" action="https://formspree.io/f/xwkdyezv" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="tipoConsulta">Tipo de Consulta:</label>
+        <select id="tipoConsulta" name="tipoConsulta">
+          <option value="evento">Alquiler</option>
+          <option value="evento">Camisetas</option>
+          <option value="evento">Eventos</option>
+          <option value="compras">Compras</option>
+          <option value="otro">Otro</option>
+        </select><br><br>
+
+        <label for="consulta">Consulta:</label>
+        <textarea id="consulta" name="consulta" rows="4" cols="50"></textarea><br><br>
+
+        <button type="button" onclick="limpiarFormulario()">Deshacer</button>
+        <button type="submit">Enviar</button>
+    </main>
+
+    <footer>
+
+      <div class="logo_pp">
+        <a href="index.html"><img src="images/logo-puntopenal.png" alt="logo punto penal"/></a>
+      </div>
+      <p class="footer_der">Tu punto de encuentro!</p>
+  
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="contacto-main.js"></script>
+  </body>
+</html>

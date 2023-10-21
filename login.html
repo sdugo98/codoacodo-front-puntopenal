@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Punto Penal</title>
+    <link rel="shortcut icon" href="images/logo-puntopenal.ico">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/13b7066a14.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="container-login">
+        <article class="form-box">
+            <div class="volver">
+                <a href="index.html" class="volver">Volver</a>
+            </div>
+            <h1 id="title">Registrarse</h1>
+            <div>
+                <form class="input-group" id="form">
+
+                    <!-- Telefono -->
+                    <div class="input-field" id="telField">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <input type="tel" name="tel" id="tel" placeholder="Telefono">
+                        <i class="mark fa-solid fa-xmark dn" id="telMark"></i>
+                    </div>
+                    <p id="telError" class="error dn">El teléfono debe ser de 7 a 14 números.</p>
+
+                    <!-- Email -->
+                    <div class="input-field" id="emailField">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" name="email" id="email" placeholder="Correo">
+                        <i class="mark fa-solid fa-xmark dn" id="emailMark"></i>
+                    </div>
+                    <p id="emailError" class="error dn">Este correo no es válido.</p>
+
+                    <!-- Usuario -->
+                    <div class="input-field" id="userField">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="user" id="user" placeholder="Usuario">
+                        <i class="mark fa-solid fa-xmark dn" id="userMark"></i>
+                    </div>
+                    <p id="userError" class="error dn">El usuario solo puede contener letras, numeros, guión y guión bajo, y debe ser de 4 a 16 caracteres.</p>
+
+                    <!-- Contraseña -->
+                    <div class="input-field" id="passwordField">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Contraseña">
+                        <i class="mark fa-solid fa-xmark dn" id="passwordMark"></i>
+                    </div>
+                    <p id="passwordError" class="error dn">La contraseña debe ser de 4 a 12 dígitos.</p>
+
+                    <!-- Enviar -->
+                    <input type="submit" value="Enviar" class="submit-btn" id="submitBtn">
+                    <p class="dn" id="pass">Olvidaste la contraseña? <a href="#">Click aquí!</a></p>
+                </form>
+                <div class="btn-field">
+                    <button type="button" id="registrarBtn">Registrarse</button>
+                    <button type="button" id="ingresarBtn" class="disable">Ingresar</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

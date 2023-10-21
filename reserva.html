@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | Punto Penal</title>
+    <link rel="shortcut icon" href="images/logo-puntopenal.ico">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/13b7066a14.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <main class="container-login">
+        <article class="form-box">
+            <h1 id="title">Reservar</h1>
+            <div>
+                <form class="input-group" id="form-reserva" action="https://formspree.io/f/xwkdyezv" method="POST">
+                    <!-- Nombre -->
+                    <div class="input-field" id="userField">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="Nombre" value="Ariel">
+                        <i class="mark fa-solid fa-xmark dn" id="userMark"></i>
+                    </div>
+                    <p id="userError" class="error dn">El usuario solo puede contener letras, numeros, guión y guión
+                        bajo, y debe ser de 4 a 16 caracteres.</p>
+
+                    <!-- Contraseña -->
+                    <div class="input-field" id="passwordField">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" name="Apellido" value="Palazzesi">
+                        <i class="mark fa-solid fa-xmark dn" id="passwordMark"></i>
+                    </div>
+                    <p id="passwordError" class="error dn">La contraseña debe ser de 4 a 12 dígitos.</p>
+
+                    <!-- Email -->
+                    <div class="input-field" id="emailField">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="" name="mail" value="ariel.palazzesi@bue.edu.ar">
+                        <i class="mark fa-solid fa-xmark dn" id="emailMark"></i>
+                    </div>
+                    <p id="emailError" class="error dn">Este correo no es válido.</p>
+
+                    <div class="input-field" id="emailField">
+                        <i class="fa-regular fa-calendar"></i>
+                        <input type="date" id="fecha" name="fecha" placeholder="Fecha:"
+                            onchange="validarDiaLaborable(this)">
+                        <p id="mensajeError" style="color: red;"></p>
+
+                    </div>
+
+                    <div class="input-field-hora" id="userField">
+                        <i class="fa-regular fa-clock"></i>
+                        <input type="text" value="Hora" readonly>
+                        <select id="hora" name="hora">
+                            <option value="08:00">08:00 am</option>
+                            <option value="09:00">09:00 am</option>
+                            <option value="10:00">10:00 am</option>
+                            <option value="11:00">11:00 am</option>
+                            <option value="12:00">12:00 am</option>
+                            <option value="13:00">13:00 pm</option>
+                            <option value="14:00">14:00 pm</option>
+                            <option value="15:00">15:00 pm</option>
+                            <option value="16:00">16:00 pm</option>
+                            <option value="17:00">17:00 pm</option>
+                            <option value="18:00">18:00 pm</option>
+                            <option value="19:00">19:00 pm</option>
+                        </select>
+                        <input type=""><label for="hora"></label>
+                    </div>
+
+                    <!-- Enviar -->
+                    <div id="btn-field">
+                    <button type="submit" id="reservarBtn">Reservar</button>
+                </div>
+                </form >
+            </div >
+        </article >
+    </main >
+                            <script src="validacion-reserva.js"></script>       
+</body>
+
+</html>

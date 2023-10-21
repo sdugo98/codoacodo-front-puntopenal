@@ -1,0 +1,963 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400;1,500&display=swap');
+
+/*---------------------------------------------------ESTILOS GENERALES------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-one: #4E35F2;
+    --color-two: #614ED9;
+    --color-three: #75D966;
+    --color-four: #F2F2F2;
+    --color-five: rgb(0, 0, 0);
+    --color-six: #49a53b;
+    --color-seven: rgba(19, 50, 189);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom, rgba(19, 50, 189), rgba(0, 0, 0, 1));
+    overflow-x: hidden;
+}
+
+
+
+/* -----------------------------------------------------------ESTILOS MENÚ a menos de 768px- ---------------------------------*/
+#buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(19, 50, 189, 0);                      
+    margin: 5px;/*agregue margen a los iconos de redes*/
+}
+
+
+.redes-btn i {
+    color: var(--color-four);
+    margin: 1px;
+ }
+
+.redes-btn i:hover {
+    transform: scale(1.05, 1.05);
+    transition: transform 0.2s ease-in;
+}
+
+.reserva-btn a {
+    text-decoration: none;
+    color: var(--color-four);
+    background-color: var(--color-three);
+    padding: 1rem;
+    border-radius: 2rem;
+    font-weight: 800;
+}
+
+.reserva-btn a:hover {
+    background-color: #49a53b;
+    transition: all 0.2s ease-in;
+}
+
+#header-nav {
+    border-bottom: 1px solid var(--color-five);
+    background-color: var(--color-one);
+    background: linear-gradient(to bottom, rgba(19, 50, 189, 0.555), rgba(0, 0, 0, 0.986));
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+.logo img {
+    width: 10rem;
+}
+
+#menu-toggler {
+    /*circulo exterior*/
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid var(--color-two);
+    cursor: pointer;
+}
+
+#menu-toggler svg {
+    fill: var(--color-four);
+    height: 4rem;
+   
+}
+
+#nav-menu {
+    flex-direction: column;
+    text-align: end;
+    font-size: 2rem;
+    margin-right: 20px;
+}
+
+
+#nav-menu a {
+    color: var(--color-four);
+    text-decoration: none;
+    margin: 1rem;
+}
+
+#nav-menu a:hover {
+    transition: transform 0.2s ease-in;
+    transform: scale(1.05, 1.05);
+    border-bottom: 1px solid var(--color-two);
+}
+
+#nav-menu a:nth-child(3) {
+    display: none;
+}
+
+/* Abrir y cerrar el nav menu */
+.menu-open {
+    display: flex;
+}
+
+.menu-close {
+    display: none;
+}
+
+/*----------------------------------------------- INDEX a menos de 768- ------------------------------*/
+
+#bienvenidos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-four);
+    z-index: 0;
+    padding: 0;
+}
+
+#bienvenidos>h1 {
+    position: absolute;
+    color: #220cae;
+    z-index: 1;/* Asegura que el texto esté por encima del video */
+    animation: fadeInDown;/* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;/* don't forget to set a duration! */
+    font-family: 'Archivo Black', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+#bienvenidos>p {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+    gap: .5rem;
+    font-size: 1em;
+    z-index: 1;
+    text-align: center;
+}
+.grid-container-index{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border-style: hidden;
+    color: var(--color-four);
+    padding: 0;             
+}
+
+.box-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content h2{
+    text-align: center;
+    font-family: 'Archivo Black';
+    padding: 10px;
+}
+
+.box-content p{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.box-content2{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content2 h2{
+    font-family: 'Archivo Black';
+    padding: 10px;
+}
+
+.box-content2 p{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.grid img {
+    width: 100%;   
+}
+
+.box-mapa {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-mapa-content h2 {
+    margin-top: 10px;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 1.5em;
+}
+
+.box-mapa-content p {
+    padding: 10px;
+    font-size: 0.9em;
+ 
+}
+
+iframe {
+    position: relative;   
+    width: 60%;
+}
+
+
+/*  ------------------------------------------------ SERVICIOS  a menos de 768------------------------------------- */
+
+.container-grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.eventos-info {
+    border: 1px var(--color-two);
+    border-style: solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--color-five);
+    padding: 5px;
+    grid-area: 1 / 1 / span 1 / span 5;
+    margin: 2px 1px 2px 1px;
+}
+
+.imagen-info {
+    background-image: url("./images/copas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px var(--color-two);
+    border-style: solid;
+    border-radius: 5px;
+    margin: 2px 2px 2px 2px;   
+    grid-area: 2 / 1 / span 1 / span 5;
+}
+
+.lavados-info {
+    border: 1px var(--color-two);
+    border-style: solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-five);
+    flex-wrap: wrap;
+    padding: 5px;
+    grid-area: 1 / 1 / span 1 / span 5;
+}
+
+.section-info {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.eventos-info h1 {
+    color: var(--color-four);
+    text-align: left;
+    margin-top: 5px;
+   
+}
+
+.eventos-info p {
+    color: var(--color-four);
+    margin: 1em;
+    justify-content: start;
+    text-align: center;
+    align-items: start;
+    font-size: 0.9em;
+   
+}
+
+/*------------------- CSS de los botones de la pagina "Servicios" */
+
+.eventos-info button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    background-color: var(--color-two);
+    color: var(--color-four);
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px; 
+}
+
+.eventos-info button:hover {
+    background: var(--color-four);
+    color: var(--color-five);
+}
+
+.lavados-info h1 {
+    color: var(--color-four);
+    text-align: center;
+    margin-top: 5px;
+  
+}
+
+.lavados-info p {
+    color: var(--color-four);
+    font-size: 0.9em;
+    text-align: center;
+    margin: 1em;
+}
+
+.lavados-info button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 30px;
+    background-color: var(--color-two);
+    color: var(--color-four);
+    font-family: 'Montserrat';
+    font-size: 0.8em;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;    
+}
+
+
+.lavados-info button:hover {
+    background: var(--color-four);
+    color: var(--color-five);
+}
+
+.imagen-info-2 {
+    border: 1px var(--color-two);
+    border-style: solid;
+    background-image: url("./images/camisetas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 2px 2px 2px 2px;
+    border-radius: 5px;
+    grid-area: 2 / 1 / span 2 / span 5;
+}
+
+/*------------------------------------------- Codigo de pagina Alquiler a menos de 768 -------------------------------------*/
+.pAlquiler {
+
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-four);
+    padding: 1px;
+    background-color: var(--color-five);
+
+}
+
+.clima {
+
+    text-align: center;
+    font-size: 1em;
+    color: var(--color-four);
+    padding: 10px;
+    background-color: var(--color-five);
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 25% 25% 25% 25%;
+    background-image: url("./images/main.jpg");
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    
+}
+.card {
+    height: 250px;
+    border: 2px solid var(--color-two);
+    border-radius: 10px;
+    color: var(--color-four);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1em;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.card h2{
+
+    margin-top: 30px;
+    padding: 10px;
+
+}
+
+.res-btn a {
+    text-decoration: none;
+    color: var(--color-four);
+    background-color: var(--color-two);
+    padding: 1rem;
+    border-radius: 1.3rem;
+    font-weight: 800;
+}
+
+
+/*  ------------------------------------------- FORMULARIO de CONtACTO a menos de 768--------------------------------------------*/
+
+#formulario {
+    width: 60%; /* Ancho del formulario */   
+    margin: 2em auto 2em; /* Agrega margen arriba y abajo */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--color-four);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los campos de entrada */
+#formulario input[type="text"],
+#formulario input[type="email"],
+#formulario input[type="tel"],
+#formulario select,
+#formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-two);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--color-four);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilos para los botones */
+/*para poder centrarlos los puse en un contenedor*/
+#formulario .botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    /* Espaciado entre los botones */
+}
+#formulario button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: var(--color-four);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#formulario button[type="button"] {
+    background-color: #7c7a7a;/* Cambia el color del botón "Deshacer" */
+
+}
+
+/* Estilos adicionales para textarea */
+#formulario textarea {
+    resize: vertical;/* Permite cambiar el tamaño verticalmente */
+  
+}
+
+/* -----------------------------Estilos para el carrusel  a menos de 768px-----------------------------------*/
+.carrusel {
+    height: 15vw;
+    overflow: hidden;
+    /*no muestra lo que sobresalga*/
+    position: relative;
+    text-align: center;
+    color: var(--color-four);
+    /*blanco*/
+}
+
+.animacion {
+    display: flex;
+    /*una imagen al lado de la otra*/
+    width: 1000%;
+    /*ancho de todas las imagenes, cuando sean 10 modificar*/
+    position: absolute;
+    animation: scroll 100s linear infinite;
+    animation-delay: 1s;
+
+
+}
+
+.imagenes {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.imagenes img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.imagenes p {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-45%, -45%);
+    font-size: 2vw;
+    /* Tamaño del texto en relación al ancho de la pantalla */
+}
+
+
+/* -------------------------------Animación carrusel */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    10% {
+        transform: translateX(-10%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    20% {
+        transform: translateX(-20%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    30% {
+        transform: translateX(-30%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    40% {
+        transform: translateX(-40%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+
+    50% {
+        transform: translateX(-50%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    60% {
+        transform: translateX(-60%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    70% {
+        transform: translateX(-70%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    80% {
+        transform: translateX(-80%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+    90% {
+        transform: translateX(-90%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+
+
+    100% {
+        transform: translateX(-10%);
+        /* Cambia a -200% para mostrar la última imagen */
+    }
+}
+
+.carrusel:hover .animacion {
+    animation-play-state: paused;
+}
+
+/*-----------------------ESTILOS DEL FOOTER a menos de 768px-----------------------*/
+/* Estilos para el pie de página */
+footer {
+    display: flex;
+    background-color: var(--color-five);
+    /*negro*/
+    justify-content: space-around;
+    align-items: center;
+    transition: .3s ease-in-out;
+    color: var(--color-four);
+    /*blanco*/
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.footer_der {
+    font-style: italic;
+    color: var(--color-two);
+}
+
+.logo_pp img {
+    padding: 10px;
+    height: 15vw;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.logo_pp img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(78, 53, 242, 0.6), 0 6px 20px 0 rgba(97, 78, 217, 0.6);
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* ------------------------RESOLUCION entre 768 Y 1024PX  ----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media(min-width: 768px) and (max-width: 1024px) {
+    /* ----------------------------------------------MENU entre 768 Y 1024px----------------------------------- */
+
+
+    #buttons {      
+        margin: 10px;       
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navbar-container {
+        display: none;
+    }
+
+    #menu-toggler {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+    }
+
+    #nav-menu a:nth-child(3) {
+        display: inline;
+    }
+
+    /*---------------------------------------------INDEX entre 768 Y 1024PX--------------------------------------------- */
+    #bienvenidos>h1 {
+        font-size: 2.5em;
+        width: 100%;
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #bienvenidos p {
+        margin-top: 15rem;
+        height: 0;
+        font-size: 1.4em;
+    }
+
+    .box-content p {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .box-content2 p{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    .box-mapa {
+        font-size: 1.3em;       
+    }
+
+    .box-mapa-content h2 {
+        margin: 0;
+    }
+
+    .box-mapa-content p {
+        font-size: .8em;
+        margin: 0;
+    }
+
+    .box-mapa iframe {
+        width: 60%;
+        max-height: 250px;
+    }
+   
+/* -----------------------------------------------ALQUILER entre 768 Y 1024px---------------------------------*/
+    .card {
+        height: 300px;
+    }
+
+    .pAlquiler {
+        font-size: 30px;
+    }
+  
+    /* ------------------------------------------SERVICIOS entre 768 Y 1024px------------------------------- */
+
+    .container-grid-servicios {   
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    
+    .eventos-info {
+         grid-area: 1 / 1 / span 2 / span 3;
+    }
+
+    .imagen-info {
+        grid-area: 1 / 4 / span 2 / span 2;
+        background-image: url("./images/copas.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+   }
+
+   .eventos-info button {   
+    width: 150px;
+    font-size: 1em;    
+}
+.lavados-info {
+    margin: 2px 1px 2px 1px;   
+   grid-area: 1 / 1 / span 2 / span 3;
+   
+}
+   
+.imagen-info-2 {
+    grid-area: 1 / 4 / span 2 / span 2;
+    background-image: url("./images/camisetas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lavados-info p {
+    font-size: 1.1em;
+}
+
+.lavados-info button {
+    width: 150px;   
+    font-size: 1em;
+}
+
+.eventos-info p {  
+    font-size: 1.1em;  
+}
+
+/*---------------------------------------------- FOOTER  entre 768 Y 1024px -------------------------------------*/
+    footer p {
+        padding: 0;
+        font-size: 1.5em;
+    } 
+
+    .logo_pp img {      
+        max-height: 90px;
+    }
+/* --------------------------CARRUSEL entre 768 Y 1024px-----------------------------*/
+    .imagenes p {
+        top: 50%;
+        left: 50%;
+    }
+}/* ------------------------------FIN entre 768 Y 1024px------------------------------------------- */
+
+
+/*--------------------------------------------------------------------------------------------------*/
+/* ------------------------RESOLUCION de 1025 en adelante  ----------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/
+@media (min-width: 1025px) {
+    /*------------------------------------MENU desde 1025px-------------------------------------------*/
+
+    .eventos-info h1{
+        margin-bottom: 20px;
+    }
+
+    .eventos-info p {
+        margin-top: 10px;
+    }
+    
+    #buttons {      
+        margin: 10px;       
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navbar-container {
+        display: none;
+    }
+/*opciones del menu desplegable*/
+    #menu-toggler {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+    }
+
+    #nav-menu a:nth-child(3) {
+        display: inline;
+    }
+
+
+/*---------------------------------------------INDEX desde 1025px--------------------------------------------- */
+    #bienvenidos>h1 {
+        font-size: 3em;
+        margin-left: 140px;
+        margin-bottom: 150px;
+    }
+
+    #bienvenidos>p {
+        font-size: 1.8em;
+    }
+
+    .box-content h2 {
+        font-size: 2.2em;
+    }
+
+    .box-content2 p{
+        font-size: 1.4em;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .box-content2 h2 {
+        font-size: 2.2em;
+    }
+
+    .box-content p{
+        font-size: 1.4em;
+        text-align: center;
+        padding: 10px;
+    }
+
+.box-mapa h2{
+    font-size: 2.2em;
+}
+    .box-mapa p {
+    font-size: 1.4em;
+    }
+
+
+ /* ------------------------------------------SERVICIOS desde 1025px------------------------------- */
+
+ .container-grid-servicios {   
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.eventos-info {
+     grid-area: 1 / 1 / span 2 / span 3;
+}
+
+.imagen-info {
+    grid-area: 1 / 4 / span 2 / span 2;
+    background-image: url("./images/copas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eventos-info button {   
+width: 150px;
+font-size: 1em;    
+}
+.lavados-info {
+margin: 2px 1px 2px 1px;   
+grid-area: 1 / 1 / span 2 / span 3;
+}
+
+.imagen-info-2 {
+grid-area: 1 / 4 / span 2 / span 2;
+background-image: url("./images/camisetas.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lavados-info p {
+font-size: 1.1em;
+}
+
+.lavados-info button {
+width: 150px;   
+font-size: 1em;
+}
+
+.eventos-info p {  
+font-size: 1.1em;  
+}
+
+
+/*------------------------------- FOOTER  desde 1025px ---------------------------*/
+footer p {
+    padding: 0;
+    font-size: 1.5em;
+} 
+
+.logo_pp img {      
+    max-height: 100px;
+}
+
+
+}/* ------------------------------FIN desde 1025------------------------------------------- */
+
