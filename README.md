@@ -6,8 +6,12 @@ Este repositorio es para el Grupo 4 de Codo a Codo.
 - Santiago Colantonio
 - Armando Ceferino Lafuente
 - Sebastian Dugo
-- Tiziana
+- Tiziana Benegas
 - Nicole Molenberg
 
 # Pagina para visitar el proyecto:
-https://arielnicolas2021.github.io/Punto-Penal/
+https://sdugo98.github.io/codoacodo-front-puntopenal/
+
+# Link al repositorio del Grupo 4 "Comision 23512" Python.
+
+https://github.com/sdugo98/codoacodo-front-puntopenal-grupo4.git
